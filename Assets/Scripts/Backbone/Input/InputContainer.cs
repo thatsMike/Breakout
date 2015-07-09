@@ -12,24 +12,41 @@ namespace Prototypes.Backbone
 
     public class InputContainer : MonoBehaviour
     {
+
+        #region data structures
+
         public struct InputValues
         {
            //bool touch = false;
 
         }
 
+        #endregion data structures
+
+        #region class intern values
+
         private InputValues _inputValues;
+
+        #endregion class intern values
+
+        #region init
 
         private void Awake()
         {
             //_inputValues = new InputValues();
         }
 
+        #endregion init
+
+        #region interface
+
         public void ResetInputContainer()
         {
             // reset all values before getting new ones
 
-            //_inputValues.touch = false;
         }
+
+        #endregion interface
+
     }
 }

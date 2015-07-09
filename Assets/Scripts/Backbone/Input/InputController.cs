@@ -12,8 +12,15 @@ namespace Prototypes.Backbone
 
     public class InputController : MonoBehaviour
     {
+
+        #region class intern values
+
         private InputContainer _inputContainer = null;
         private GameManager _gm = null;
+
+        #endregion class intern values
+
+        #region init
 
         private void Awake()
         {
@@ -27,6 +34,8 @@ namespace Prototypes.Backbone
             if (GameManager.Instance != null) _gm = GameManager.Instance;
             else Debug.Log("there is no GameManager");
         }
+
+        #endregion init
 
         // Update is called once per frame
         private void Update()

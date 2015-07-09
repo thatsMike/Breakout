@@ -12,17 +12,24 @@ namespace Prototypes.Backbone
     public class Backbone : MonoBehaviour
     {
 
-        #region SINGLETON
+        #region singleton
 
         public static Backbone Instance { get { return _instance; } }
         private static Backbone _instance = null;
 
-        #endregion
+        #endregion singleton
+
+        #region init
 
         private void Awake()
         {
             // keeps the backbone alive in all levels
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
+
+            _instance = this;
         }
+
+        #endregion init
+
     }
 }
